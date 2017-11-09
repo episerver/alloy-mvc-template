@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EPiServer.Templates.Alloy.Mvc.Sources</id>
+    <version>$version$</version>
+    <authors>EPiServer AB</authors>
+    <owners>EPiServer AB</owners>
+    <projectUrl>http://www.episerver.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contains source code for the Alloy Templates written using MVC. Can be added to an empty EPiServer project.</description>
+    <releaseNotes />
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.1.3" />
+      <dependency id="EPiServer.CMS.UI.AspNetIdentity" version="[11, 12)" />
+      <dependency id="EPiServer.ServiceLocation.StructureMap" version="[1.0.0, 3.0.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\build\transformers\alloymvc.web.config.transform" target="content\web.config.transform"/>
+    <file src="..\..\build\transformers\alloymvc.views.web.config.transform" target="content\Views\web.config.transform"/>
+    <file src="..\..\build\transformers\web.config.install.xdt" target="content\web.config.install.xdt"/>
+    <file src="..\..\build\database\DefaultSiteContent.episerverdata" target="content\App_Data\DefaultSiteContent.episerverdata"/>
+    <file src="bin\NuGetSources\Global.cs.pp" target="content" />
+    <file src="bin\NuGetSources\Startup.cs.pp" target="content" />
+    <file src="bin\NuGetSources\Business\**\*.pp" target="content\Business" exclude="bin\NuGetSources\Business\**\*Search*.pp" />
+    <file src="bin\NuGetSources\Models\**\*.pp" target="content\Models" exclude="bin\NuGetSources\Models\**\Search*.pp" />
+    <file src="bin\NuGetSources\Controllers\**\*.pp" target="content\Controllers" exclude="bin\NuGetSources\Controllers\SearchPageController*.pp" />
+    <file src="bin\NuGetSources\Helpers\**\*.pp" target="content\Helpers" />
+    <file src="bin\NuGetSources\Views\**\*.*" target="content\Views" exclude="bin\NuGetSources\Views\SearchPage\*.*" />
+    <file src="bin\NuGetSources\module.config.pp" target="content"/>
+    <file src="ClientResources\**\*.*" target="content\ClientResources" />
+    <file src="Resources\**\*.*" target="content\Resources" />
+    <file src="Static\**\*.*" target="content\Static" />
+    <file src="*.ico" target="content"/>
+  </files>
+</package>

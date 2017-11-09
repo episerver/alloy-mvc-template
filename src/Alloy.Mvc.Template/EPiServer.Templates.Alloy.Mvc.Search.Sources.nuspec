@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EPiServer.Templates.Alloy.Search.Mvc.Sources</id>
+    <version>$version$</version>
+    <authors>EPiServer AB</authors>
+    <owners>EPiServer AB</owners>
+    <projectUrl>http://www.episerver.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contains source code for the Alloy Search Templates written using MVC. Can be added to an Alloy project without search.</description>
+    <releaseNotes />
+    <dependencies>
+        <dependency id="EPiServer.Search.Cms" version="[9,10)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\NuGetSources\Business\**\Search*.pp" target="content\Business" />
+    <file src="bin\NuGetSources\Models\**\Search*.pp" target="content\Models" />
+    <file src="bin\NuGetSources\Controllers\Search*.pp" target="content\Controllers" />
+    <file src="bin\NuGetSources\Views\SearchPage\*.*" target="content\Views\SearchPage" />
+  </files>
+</package>
