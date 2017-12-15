@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>EPiServer.Templates.Alloy.Search.Mvc.Sources</id>
+    <id>Alloy.Mvc.Template.Search.Sources</id>
     <version>$version$</version>
     <authors>EPiServer AB</authors>
     <owners>EPiServer AB</owners>
