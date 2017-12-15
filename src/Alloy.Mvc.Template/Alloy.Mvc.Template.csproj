@@ -549,7 +549,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
+      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
@@ -561,7 +561,7 @@
   </Target>
   <Import Project="$(SolutionDir)\build\Templates.targets" />
   <ItemGroup>
-    <NugetPackage Include="EPiServer.Templates.Alloy.Mvc.Sources.nuspec" />
-    <NugetPackage Include="EPiServer.Templates.Alloy.Mvc.Search.Sources.nuspec" />
+    <NugetPackage Include="Alloy.Mvc.Template.Search.Sources.nuspec" />
+    <NugetPackage Include="Alloy.Mvc.Template.Sources.nuspec" />
   </ItemGroup>
 </Project>
