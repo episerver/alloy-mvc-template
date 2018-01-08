@@ -16,8 +16,10 @@ namespace AlloyTemplates.Business.Rendering
     {
         protected override string GetContentAreaItemCssClass(HtmlHelper htmlHelper, ContentAreaItem contentAreaItem)
         {
+            var baseItemClass = base.GetContentAreaItemCssClass(htmlHelper, contentAreaItem);
+
             var tag = GetContentAreaItemTemplateTag(htmlHelper, contentAreaItem);
-            return string.Format("block {0} {1} {2}", GetTypeSpecificCssClasses(contentAreaItem, ContentRepository), GetCssClassForTag(tag), tag);
+            return $"block {baseItemClass} {GetTypeSpecificCssClasses(contentAreaItem, ContentRepository)} {GetCssClassForTag(tag)} {tag}";
         }
 
         /// <summary>
