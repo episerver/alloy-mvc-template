@@ -1,9 +1,10 @@
-﻿using System.Web.Mvc;
+using System.Web.Mvc;
 using AlloyTemplates.Business;
 using AlloyTemplates.Models.Pages;
 using AlloyTemplates.Models.ViewModels;
 using EPiServer.Web.Mvc;
 using EPiServer.Shell.Security;
+using EPiServer.Framework.Web;
 
 namespace AlloyTemplates.Controllers
 {
@@ -29,6 +30,11 @@ namespace AlloyTemplates.Controllers
         public ActionResult Logout()
         {
             UISignInManager.Service.SignOut();
+            new AspNetAntiForgery(
+                    ControllerContext.RequestContext.HttpContext.Request,
+                    ControllerContext.RequestContext.HttpContext.Response)
+                .RemoveCookie();
+
             return RedirectToAction("Index");
         }
 
