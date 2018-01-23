@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -24,5 +24,5 @@ using System.Runtime.InteropServices;
 
 
 [assembly: CLSCompliant(false)]
-[assembly: AssemblyVersion("1.1.0")]
-[assembly: AssemblyInformationalVersion("1.1.0-developerbuild")]
+[assembly: AssemblyVersion("1.1.1")]
+[assembly: AssemblyInformationalVersion("1.1.1-developerbuild")]
