@@ -23,6 +23,7 @@
         @Styles.Render("~/bundles/css")
         @Scripts.Render("~/bundles/js")
         @Html.RequiredClientResources("Header") @*Enable components to require resources. For an example, see the view for VideoBlock.*@
+        @Html.RenderEPiServerQuickNavigator()
     </head>
 
     <body>
@@ -30,8 +31,6 @@
         {
             Html.RenderPartial("Readonly", Model);
         }
-
-        @Html.RenderEPiServerQuickNavigator()
         @Html.FullRefreshPropertiesMetaData()
         <div class="container">
             @if(!Model.Layout.HideHeader)
