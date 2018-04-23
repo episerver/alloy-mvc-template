@@ -34,6 +34,7 @@ namespace AlloyTemplates.Business.Initialization
                 // Passing a second argument to For<> will clone the given settings object
                 // instead of the default one and extend it with some basic toolbar commands.
                 config.For<EditorialBlock>(t => t.MainBody, config.Empty())
+                    .Plugins(DefaultValues.EpiserverPlugins)
                     .DisableMenubar()
                     .Toolbar("bold italic underline strikethrough");
             });
