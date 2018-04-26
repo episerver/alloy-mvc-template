@@ -1,13 +1,93 @@
-﻿@using AlloyTemplates
+@using AlloyTemplates
+@using EPiServer.Editor
 @model PageViewModel<ArticlePage>
 
 @{ Layout = "~/Views/Shared/Layouts/_LeftNavigation.cshtml"; }
 
-<h1 @Html.EditAttributes(x => x.CurrentPage.PageName)>@Model.CurrentPage.PageName</h1>
-<p class="introduction" @Html.EditAttributes(x => x.CurrentPage.MetaDescription)>@Model.CurrentPage.MetaDescription</p>
-<div class="row">
-    <div class="span8 clearfix" @Html.EditAttributes(x => x.CurrentPage.MainBody)>
-        @Html.DisplayFor(m => m.CurrentPage.MainBody)
-    </div>
+<style type="text/css">
+    .article-about {
+        font-size: 1.4em;
+    }
+
+    .article-summary {
+        margin: 20px 0;
+    }
+    .article-summary p {
+        width: 63%;
+        font-size: 1.2em;
+        display: inline-block;
+    }
+    .article-summary img {
+        width: 33%;
+        margin: 0 20px 0 0;
+    }
+
+    .article-summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 25px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .article-summary-grid p {
+        font-size: 1.2em;
+    }
+    .article-summary-grid .left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .article-summary-grid .right {
+        grid-column: 2 / 4;
+        grid-row: 1;
+
+        align-self: center;
+    }
+</style>
+
+<h1>Designing frontends for OPE without wrapping elements</h1>
+<br />
+
+<h2>Scenario 1 - Inline elements</h2>
+
+<div class="well well-small"><strong>Scenario 1:</strong> Notice below how <strong>PropertyFor</strong> breaks the styling of the inline string.</div>
+<p class="article-about scenario">
+    This article originated in @Html.PropertyFor(x => x.CurrentPage.CountryOfOrigin) and was written by @Html.PropertyFor(x => x.CurrentPage.Author, new { CssClass = "author" }).
+</p>
+<div class="well well-small"><strong>Scenario 1 Solution A:</strong> using Razor HTML helpers</div>
+<p class="article-about solution">
+    This article originated in @Html.PropertyFor(x => x.CurrentPage.CountryOfOrigin, new { CustomTag = "span"}) and was written by <span class="author" @Html.EditAttributes(x => x.CurrentPage.Author)>@Model.CurrentPage.Author</span>.
+</p>
+<div class="well well-small"><strong>Scenario 1 Solution B:</strong> using HTML attributes</div>
+<p class="article-about solution">
+    This article originated in <span data-epi-property-name="CountryOfOrigin" data-epi-use-mvc="True">@Model.CurrentPage.CountryOfOrigin</span> and was written by <span class="author" data-epi-property-name="Author" data-epi-use-mvc="True">@Model.CurrentPage.Author</span>.
+</p>
+
+
+<h2>Scenario 2 - Inline elements and images</h2>
+
+<div class="well well-small">
+    <strong>Scenario 2:</strong> The text below is a standard string property displayed with <strong>PropertyFor</strong> inside a <strong>&lt;p&gt;</strong> tag and styled to appear next to the image, which is also rendered with <strong>PropertyFor</strong>.
 </div>
-@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row", Tag = Global.ContentAreaTags.TwoThirdsWidth })
+<div class="article-summary scenario">
+    @Html.PropertyFor(x => x.CurrentPage.SummaryImage)
+    <p>@Html.PropertyFor(x => x.CurrentPage.SummaryText)</p>
+</div>
+
+<div class="well well-small">
+    <strong>Scenario 2 has no Solution without adding a wrapping element.</strong> The way images are rendered require a wrapping element, even with <strong>EditAttributes</strong>. Using <strong>EditAttributes</strong> directly on the img-tag does not update as expected. Changing this requires a breaking change in a new major release.
+</div>
+<div class="article-summary scenario">
+    <img @Html.EditAttributes(x => x.CurrentPage.SummaryImage) src="@Url.ContentUrl(Model.CurrentPage.SummaryImage)" class="image" />
+    <p @Html.EditAttributes(x => x.CurrentPage.SummaryText)>@Model.CurrentPage.SummaryText</p>
+</div>
+
+<div class="well well-small">
+    <strong>Scenario 2 Solution with a wrapping div-element.</strong> Uses CSS grids, so other scenarios might require other styling.
+</div>
+<div class="article-summary-grid solution">
+    <div @Html.EditAttributes(x => x.CurrentPage.SummaryImage) class="left">
+        <img src="@Url.ContentUrl(Model.CurrentPage.SummaryImage)"/>
+    </div>
+    <p @Html.EditAttributes(x => x.CurrentPage.SummaryText) class="right">
+        @Model.CurrentPage.SummaryText
+    </p>
+</div>
