@@ -21,4 +21,7 @@ License.config
 # NuGet Packages
 [Pp]ackages/
 
+# npm Packages
+node_modules/
+
 .idea/

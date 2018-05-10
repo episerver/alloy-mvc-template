@@ -1,0 +1,2 @@
+**/*.js
+!ClientResources/Scripts/**/*.js

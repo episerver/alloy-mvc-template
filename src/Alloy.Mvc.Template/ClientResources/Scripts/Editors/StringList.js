@@ -54,7 +54,7 @@ function (
 
         multiple: true,
 
-        onChange: function (value) {
+        onChange: function () {
             // Event
         },
 
