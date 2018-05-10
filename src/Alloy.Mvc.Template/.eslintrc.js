@@ -3,7 +3,11 @@ module.exports = {
         "browser": true,
         "amd": true
     },
+    "plugins": [
+        "episerver-cms"
+    ],
     "extends": [
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:episerver-cms/recommended"
     ]
 };
