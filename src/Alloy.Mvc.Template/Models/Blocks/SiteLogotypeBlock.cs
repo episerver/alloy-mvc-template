@@ -29,8 +29,8 @@ namespace AlloyTemplates.Models.Blocks
                 var url = this.GetPropertyValue(b => b.Url);
 
                 return url == null || url.IsEmpty()
-                           ? new Url("/Static/gfx/logotype.png")
-                           : url;
+                            ? new Url("/Static/gfx/logotype.png")
+                            : url;
             }
             set
             {

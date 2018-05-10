@@ -67,7 +67,7 @@ namespace AlloyTemplates.Business
         private IEnumerable<PageData> FindPagesByPageTypeRecursively(PageReference pageLink, int pageTypeId)
         {
             var criteria = new PropertyCriteriaCollection
-                               {
+                                {
                                     new PropertyCriteria
                                     {
                                         Name = "PageTypeID",
@@ -75,7 +75,7 @@ namespace AlloyTemplates.Business
                                         Condition = CompareCondition.Equal,
                                         Value = pageTypeId.ToString(CultureInfo.InvariantCulture)
                                     }
-                               };
+                                };
 
             // Include content providers serving content beneath the page link specified for the search
             if (_providerManager.ProviderMap.CustomProvidersExist)

@@ -25,8 +25,8 @@ namespace AlloyTemplates.Models.Pages
 
                 // Use explicitly set meta title, otherwise fall back to page name
                 return !string.IsNullOrWhiteSpace(metaTitle)
-                       ? metaTitle
-                       : PageName;
+                        ? metaTitle
+                        : PageName;
             }
             set { this.SetPropertyValue(p => p.MetaTitle, value); }
         }
@@ -70,8 +70,8 @@ namespace AlloyTemplates.Models.Pages
 
                 // Use explicitly set teaser text, otherwise fall back to description
                 return !string.IsNullOrWhiteSpace(teaserText)
-                       ? teaserText
-                       : MetaDescription;
+                        ? teaserText
+                        : MetaDescription;
             }
             set { this.SetPropertyValue(p => p.TeaserText, value); }
         }

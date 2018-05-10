@@ -20,5 +20,5 @@ namespace AlloyTemplates.Models.Media
         /// </summary>
         [UIHint(UIHint.Image)]
         public virtual ContentReference PreviewImage { get; set; }
-   }
+    }
 }

@@ -86,43 +86,43 @@ h2
     }
 
 .introduction {
-	font-size:1.2em !important;
-	margin:2% 0 4% 0;
-	}
+    font-size:1.2em !important;
+    margin:2% 0 4% 0;
+    }
 
 .alloyMenu .navbar .nav>li>a {
-	color:#323335;
-	padding-bottom:12px;
-	line-height:23px;
-	text-shadow:none !important;
-	outline:none;
-	}
+    color:#323335;
+    padding-bottom:12px;
+    line-height:23px;
+    text-shadow:none !important;
+    outline:none;
+    }
 
 .alloyMenu .navbar .nav>li>ul>li a:hover {
-	outline:1px solid;
-	background:#2980bd;
-	}
+    outline:1px solid;
+    background:#2980bd;
+    }
 
 
 .span3 {
-	width:100% !important;
+    width:100% !important;
 
-	}
+    }
 
 .teaserblock img {
         width:75%;
     }
 
 .btn-blue {
-	margin-right:1%;
-	float:left;
-	clear:none;
-	}
+    margin-right:1%;
+    float:left;
+    clear:none;
+    }
 
 .searchButton {
-	float:right;
-	margin-top:7px !important;
-	}
+    float:right;
+    margin-top:7px !important;
+    }
 
 .alloyMenu .navbar-search .search-query
 {

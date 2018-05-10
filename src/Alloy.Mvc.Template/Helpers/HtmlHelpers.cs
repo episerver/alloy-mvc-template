@@ -75,7 +75,7 @@ namespace AlloyTemplates.Helpers
             var menuItem = new MenuItem(page)
                 {
                     Selected = page.ContentLink.CompareToIgnoreWorkID(currentContentLink) ||
-                               pagePath.Contains(page.ContentLink),
+                                pagePath.Contains(page.ContentLink),
                     HasChildren =
                         new Lazy<bool>(() => filter(contentLoader.GetChildren<PageData>(page.ContentLink)).Any())
                 };

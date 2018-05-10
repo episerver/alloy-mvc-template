@@ -14,9 +14,9 @@ using EPiServer.Framework.Web.Mvc;
 namespace AlloyTemplates.Controllers
 {
     /* Note: as the content area rendering on Alloy is customized we create ContentArea instances
-     * which we render in the preview view in order to provide editors with a preview which is as
-     * realistic as possible. In other contexts we could simply have passed the block to the
-     * view and rendered it using Html.RenderContentData */
+    * which we render in the preview view in order to provide editors with a preview which is as
+    * realistic as possible. In other contexts we could simply have passed the block to the
+    * view and rendered it using Html.RenderContentData */
     [TemplateDescriptor(
         Inherited = true,
         TemplateTypeCategory = TemplateTypeCategories.MvcController, //Required as controllers for blocks are registered as MvcPartialController by default
@@ -74,10 +74,10 @@ namespace AlloyTemplates.Controllers
         private bool SupportsTag(IContent content, string tag)
         {
             var templateModel = _templateResolver.Resolve(HttpContext,
-                                      content.GetOriginalType(),
-                                      content,
-                                      TemplateTypeCategories.MvcPartial,
-                                      tag);
+                                    content.GetOriginalType(),
+                                    content,
+                                    TemplateTypeCategories.MvcPartial,
+                                    tag);
 
             return templateModel != null;
         }
