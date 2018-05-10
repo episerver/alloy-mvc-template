@@ -31,7 +31,7 @@ namespace AlloyTemplates.Controllers
             }
 
             var linkUrl = GetLinkUrl(currentBlock);
-            
+
             var model = new ContactBlockModel
                 {
                     Heading = currentBlock.Heading,

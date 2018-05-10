@@ -8,7 +8,7 @@ public class IndexingServiceHostFactory : WebServiceHostFactory
     protected override ServiceHost CreateServiceHost(System.Type serviceType, System.Uri[] baseAddresses)
     {
         var host = base.CreateServiceHost(serviceType, baseAddresses);
-        
+
         WebHttpBinding binding = new WebHttpBinding("IndexingServiceCustomBinding");
         var endpoint = host.AddServiceEndpoint(typeof(EPiServer.Search.IndexingService.IIndexingService), binding, "");
 

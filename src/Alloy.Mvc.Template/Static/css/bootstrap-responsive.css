@@ -791,37 +791,37 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     padding-bottom:8px;
     background:#f1f1f1;
-    border-radius:0 0 4px 4px;            
+    border-radius:0 0 4px 4px;
   }
- 
+
  .alloyMenu .navbar .nav-collapse .nav > li.active > a, .alloyMenu .navbar .nav-collapse .nav > li.active > a:hover,  .alloyMenu .navbar .nav-collapse .nav > li > a:hover
  {
     background:#2980BD;
     color:#fff;
-    border:none;         
+    border:none;
      }
-  
+
  .alloyMenu .navbar .nav-collapse .nav > li > a.theme1:hover, .alloyMenu .navbar .nav-collapse .nav>li.active>a.theme1
   {
     background:#EB5E31;
     color:#fff;
-    border:none;    
+    border:none;
       }
-      
+
  .alloyMenu .navbar .nav-collapse .nav > li > a.theme2:hover, .alloyMenu .navbar .nav-collapse .nav>li.active>a.theme2
   {
     background:#BF5D8C;
     color:#fff;
-    border:none;    
+    border:none;
       }
-      
+
  .alloyMenu .navbar .nav-collapse .nav > li > a.theme3:hover, .alloyMenu .navbar .nav-collapse .nav>li.active>a.theme3
   {
     background:#9FC733;
     color:#fff;
-    border:none;    
-      }            
-  
+    border:none;
+      }
+
   .navbar .nav-collapse .nav.pull-right {
     float: none;
     margin-left: 0;

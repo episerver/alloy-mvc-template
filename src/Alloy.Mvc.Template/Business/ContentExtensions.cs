@@ -14,7 +14,7 @@ namespace AlloyTemplates.Business
     public static class ContentExtensions
     {
         /// <summary>
-        /// Filters content which should not be visible to the user. 
+        /// Filters content which should not be visible to the user.
         /// </summary>
         public static IEnumerable<T> FilterForDisplay<T>(this IEnumerable<T> contents, bool requirePageTemplate = false, bool requireVisibleInMenu = false)
             where T : IContent
