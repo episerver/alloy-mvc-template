@@ -1,4 +1,4 @@
-﻿All language files in this folder are included in the LocalizationService.
+All language files in this folder are included in the LocalizationService.
 
 The path to this folder is configured in EPiServerFramework.config:
 

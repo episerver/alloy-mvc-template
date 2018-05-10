@@ -1,4 +1,4 @@
-﻿This folder contains all page types.
+This folder contains all page types.
 
 Blocks should be named with a suffix of "Page", such as "StandardPage" or "ProductPage".
 

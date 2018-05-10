@@ -1,4 +1,4 @@
-﻿This folder contains all block types.
+This folder contains all block types.
 
 Blocks should be named with a suffix of "Block", such as "TeaserBlock" or "NewsListBlock".
 

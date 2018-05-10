@@ -1,4 +1,4 @@
-﻿/*
+/*
 Dojo widget for editing a list of strings. Also see property type PropertyStringList in /Models/Properties.
 */
 
