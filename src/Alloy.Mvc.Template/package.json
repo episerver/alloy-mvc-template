@@ -1,0 +1,9 @@
+{
+  "name": "alloy-mvc-template",
+  "version": "1.0.0",
+  "description": "The MVC version of the Alloy template site",
+  "repository": "https://github.com/episerver/alloy-mvc-template/",
+  "author": "Episerver AB",
+  "license": "Apache-2.0",
+  "private": true
+}
