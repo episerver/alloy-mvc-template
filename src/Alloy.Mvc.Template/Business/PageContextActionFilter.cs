@@ -12,7 +12,7 @@ namespace AlloyTemplates.Business
     /// <remarks>
     /// This filter frees controllers for pages from having to care about common context needed by layouts
     /// and other page framework components allowing the controllers to focus on the specifics for the page types
-    /// and actions that they handle. 
+    /// and actions that they handle.
     /// </remarks>
     public class PageContextActionFilter : IResultFilter
     {
@@ -30,15 +30,15 @@ namespace AlloyTemplates.Business
             if (model != null)
             {
                 var currentContentLink = filterContext.RequestContext.GetContentLink();
-                
+
                 var layoutModel = model.Layout ?? _contextFactory.CreateLayoutModel(currentContentLink, filterContext.RequestContext);
-                
+
                 var layoutController = filterContext.Controller as IModifyLayout;
                 if(layoutController != null)
                 {
                     layoutController.ModifyLayout(layoutModel);
                 }
-                
+
                 model.Layout = layoutModel;
 
                 if (model.Section == null)

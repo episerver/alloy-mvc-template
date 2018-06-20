@@ -20,7 +20,7 @@ namespace AlloyTemplates.Models.Pages
 
         [Display(GroupName = Global.GroupNames.Contact)]
         public virtual string Phone { get; set; }
-        
+
         [Display(GroupName = Global.GroupNames.Contact)]
         [EmailAddress]
         public virtual string Email { get; set; }

@@ -751,11 +751,11 @@ legend small {
 }
 
 
-fieldset legend 
-{   
+fieldset legend
+{
     border:0;
     font-size:1em;
-    margin-bottom:5px;    
+    margin-bottom:5px;
     }
 
 label,
@@ -2789,7 +2789,7 @@ button.close {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0055cc', endColorstr='#0088cc', GradientType=0);
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   color:#fff;
-  
+
 }
 
 .btn-warning {
@@ -2950,7 +2950,7 @@ input[type="submit"].btn, input[type="submit"], button[type="submit"] {
   max-width:170px;
   height:50px;
   border-radius:4px;
-  font-size:1.2em;  
+  font-size:1.2em;
 }
 
 button.btn::-moz-focus-inner,
@@ -3219,7 +3219,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
-    
+
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;

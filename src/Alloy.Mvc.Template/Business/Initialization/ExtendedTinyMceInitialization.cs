@@ -1,4 +1,4 @@
-using AlloyTemplates.Models.Blocks;
+﻿using AlloyTemplates.Models.Blocks;
 using AlloyTemplates.Models.Pages;
 using EPiServer.Cms.TinyMce.Core;
 using EPiServer.Framework;

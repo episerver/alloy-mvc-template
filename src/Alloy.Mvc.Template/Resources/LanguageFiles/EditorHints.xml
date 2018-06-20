@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <languages>
-  
+
   <language name="English" id="en">
 
     <blocks>
@@ -21,12 +21,12 @@
     <renderingerror>
       <heading>Error while rendering {0} {1}</heading>
     </renderingerror>
-    
+
     <preview>
       <heading>The block '{0}' when displayed as {1}</heading>
       <norenderer>The block '{0}' cannot be displayed as {1}</norenderer>
       <norendereratall>No renderer found for '{0}'</norendereratall>
     </preview>
   </language>
-  
+
 </languages>

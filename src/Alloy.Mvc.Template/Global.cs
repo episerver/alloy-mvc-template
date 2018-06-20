@@ -85,4 +85,3 @@ namespace AlloyTemplates
         public const string StaticGraphicsFolderPath = "~/Static/gfx/";
     }
 }
-

@@ -21,7 +21,7 @@ namespace AlloyTemplates.Business
             {
                 return GetInterfaceService(serviceType);
             }
-            return GetConcreteService(serviceType); 
+            return GetConcreteService(serviceType);
         }
 
         private object GetConcreteService(Type serviceType)

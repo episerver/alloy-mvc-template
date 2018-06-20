@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
@@ -23,7 +23,7 @@ namespace AlloyTemplates.Models.Blocks
         [CultureSpecific]
         [UIHint(UIHint.Image)]
         public virtual ContentReference Image { get; set; }
-        
+
         /// <summary>
         /// Gets or sets a description for the image, for example used as the alt text for the image when rendered
         /// </summary>

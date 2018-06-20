@@ -4,9 +4,9 @@ using EPiServer.Web;
 
 namespace AlloyTemplates.Business.Channels
 {
-     //<summary>
-     //Defines the 'Mobile' content channel
-     //</summary>
+    //<summary>
+    //Defines the 'Mobile' content channel
+    //</summary>
     public class MobileChannel : DisplayChannel
     {
         public const string Name = "mobile";

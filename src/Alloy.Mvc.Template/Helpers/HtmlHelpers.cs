@@ -30,20 +30,20 @@ namespace AlloyTemplates.Helpers
         /// Filter by access rights and publication status.
         /// </remarks>
         public static IHtmlString MenuList(
-            this HtmlHelper helper, 
-            ContentReference rootLink, 
-            Func<MenuItem, HelperResult> itemTemplate = null, 
-            bool includeRoot = false, 
-            bool requireVisibleInMenu = true, 
+            this HtmlHelper helper,
+            ContentReference rootLink,
+            Func<MenuItem, HelperResult> itemTemplate = null,
+            bool includeRoot = false,
+            bool requireVisibleInMenu = true,
             bool requirePageTemplate = true)
         {
             itemTemplate = itemTemplate ?? GetDefaultItemTemplate(helper);
             var currentContentLink = helper.ViewContext.RequestContext.GetContentLink();
             var contentLoader = ServiceLocator.Current.GetInstance<IContentLoader>();
 
-            Func<IEnumerable<PageData>, IEnumerable<PageData>> filter = 
+            Func<IEnumerable<PageData>, IEnumerable<PageData>> filter =
                 pages => pages.FilterForDisplay(requirePageTemplate, requireVisibleInMenu);
-            
+
             var pagePath = contentLoader.GetAncestors(currentContentLink)
                 .Reverse()
                 .Select(x => x.ContentLink)
@@ -75,7 +75,7 @@ namespace AlloyTemplates.Helpers
             var menuItem = new MenuItem(page)
                 {
                     Selected = page.ContentLink.CompareToIgnoreWorkID(currentContentLink) ||
-                               pagePath.Contains(page.ContentLink),
+                                pagePath.Contains(page.ContentLink),
                     HasChildren =
                         new Lazy<bool>(() => filter(contentLoader.GetChildren<PageData>(page.ContentLink)).Any())
                 };

@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 
 namespace AlloyTemplates.Business.Rendering
@@ -9,8 +9,8 @@ namespace AlloyTemplates.Business.Rendering
     /// </summary>
     public class SiteViewEngine : RazorViewEngine
     {
-        private static readonly string[] AdditionalPartialViewFormats = new[] 
-            { 
+        private static readonly string[] AdditionalPartialViewFormats = new[]
+            {
                 TemplateCoordinator.BlockFolder + "{0}.cshtml",
                 TemplateCoordinator.PagePartialsFolder + "{0}.cshtml"
             };

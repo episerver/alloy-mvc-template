@@ -15,9 +15,9 @@ namespace AlloyTemplates.Business.EditorDescriptors
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)
         {
             SelectionFactoryType = typeof(ContactPageSelectionFactory);
-            
+
             ClientEditingClass = "epi-cms/contentediting/editors/SelectionEditor";
-  
+
             base.ModifyMetadata(metadata, attributes);
         }
     }

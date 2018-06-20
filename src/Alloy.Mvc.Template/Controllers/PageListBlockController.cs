@@ -26,7 +26,7 @@ namespace AlloyTemplates.Controllers
             var pages = FindPages(currentBlock);
 
             pages = Sort(pages, currentBlock.SortOrder);
-            
+
             if(currentBlock.Count > 0)
             {
                 pages = pages.Take(currentBlock.Count);

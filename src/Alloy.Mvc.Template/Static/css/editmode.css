@@ -1,6 +1,6 @@
-﻿/* CSS specific to edit mode, such as help content displayed to the editor */
+/* CSS specific to edit mode, such as help content displayed to the editor */
 
-.alert-info 
+.alert-info
 {
     border-color: #B8C0C5;
     color: black;
@@ -18,13 +18,13 @@
 
 .alert-error .heading {
     font-weight: bold;
-    color: #ff0000;    
+    color: #ff0000;
 }
 
 .alert-error .details {
     font-size: 0.8em;
     max-height: 100px;
-    overflow: scroll;   
+    overflow: scroll;
 }
 
 .header.dim {
