@@ -311,6 +311,7 @@
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Models\Blocks\FooBlock.cs" />
     <Compile Include="Models\Pages\ISearchPage.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
     <Compile Include="Business\Rendering\ErrorHandlingContentRenderer.cs" />
@@ -442,6 +443,7 @@
     <Content Include="Static\jwplayer\player.swf" />
     <Content Include="Static\jwplayer\preview.jpg" />
     <Content Include="Static\jwplayer\video.mp4" />
+    <Content Include="Views\Shared\Blocks\FooBlock.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\_ReadMe.txt" />
     <Content Include="Views\web.config" />
     <Content Include="Global.asax" />
