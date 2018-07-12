@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -86,8 +86,8 @@
     <Reference Include="EPiServer.Cms.Shell.UI, Version=11.3.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.Core.11.3.0\lib\net461\EPiServer.Cms.Shell.UI.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Cms.TinyMce, Version=2.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.TinyMce.2.1.0\lib\net461\EPiServer.Cms.TinyMce.dll</HintPath>
+    <Reference Include="EPiServer.Cms.TinyMce, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.TinyMce.1.1.0\lib\net461\EPiServer.Cms.TinyMce.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.Cms.UI.AspNetIdentity, Version=11.3.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.AspNetIdentity.11.3.0\lib\net461\EPiServer.Cms.UI.AspNetIdentity.dll</HintPath>
@@ -307,7 +307,6 @@
     <Compile Include="Business\Initialization\DisplayModesInitialization.cs" />
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
-    <Compile Include="Business\Initialization\ExtendedTinyMceInitialization.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Models\Pages\ISearchPage.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
