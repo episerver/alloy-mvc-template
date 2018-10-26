@@ -386,6 +386,10 @@
   <ItemGroup>
     <Content Include="ClientResources\Images\icons\layoutIcons24x24.png" />
     <Content Include="ClientResources\Scripts\Editors\StringList.js" />
+    <Content Include="ClientResources\Scripts\initializer.js" />
+    <Content Include="ClientResources\Scripts\MyGlobalToolbarProvider.js" />
+    <Content Include="ClientResources\Scripts\MyToggleCommand.js" />
+    <Content Include="ClientResources\Scripts\TestCommand.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="favicon.ico" />
