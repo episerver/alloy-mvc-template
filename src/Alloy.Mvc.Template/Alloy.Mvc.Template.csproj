@@ -303,6 +303,7 @@
     <Compile Include="Business\Channels\DisplayResolutions.cs" />
     <Compile Include="Business\Channels\MobileChannel.cs" />
     <Compile Include="Business\Channels\WebChannel.cs" />
+    <Compile Include="Business\EditorDescriptors\TimeTextBoxUTCEditorDescriptor.cs" />
     <Compile Include="Business\Initialization\BundleConfig.cs" />
     <Compile Include="Business\Initialization\CustomizedRenderingInitialization.cs" />
     <Compile Include="Business\Initialization\DependencyResolverInitialization.cs" />
@@ -386,6 +387,10 @@
   <ItemGroup>
     <Content Include="ClientResources\Images\icons\layoutIcons24x24.png" />
     <Content Include="ClientResources\Scripts\Editors\StringList.js" />
+    <Content Include="ClientResources\Scripts\Editors\TimePickerUTC.js" />
+    <Content Include="ClientResources\Scripts\Editors\TimeTextBoxTZ.html" />
+    <Content Include="ClientResources\Scripts\Editors\TimeTextBoxTZ.js" />
+    <Content Include="ClientResources\Scripts\Editors\TimeTextBoxUTC.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="favicon.ico" />
