@@ -76,7 +76,7 @@ namespace AlloyTemplates
             routeData.Add("Controller", "Register");
             routeData.Add("action", "Index");
             routeData.Add("id", " UrlParameter.Optional");
-            RouteTable.Routes.Add("Register", new Route("{controller}/{action}/{id}", routeData, new MvcRouteHandler()) { RouteExistingFiles = false });
+            RouteTable.Routes.Add("Register", new Route("Register", routeData, new MvcRouteHandler()) { RouteExistingFiles = false });
         }
     }
 }
