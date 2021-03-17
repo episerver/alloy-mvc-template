@@ -1,4 +1,24 @@
 ﻿@using AlloyTemplates
+@using EPiServer.Editor
 @model PageViewModel<AlloyTemplates.Models.Pages.StartPage>
 
 @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })
+
+
+<script type="text/javascript">
+    function notifyEditMode() {
+        // expose epi.publish only for edit mode
+        @if (PageEditing.PageIsInEditMode)
+        {
+            @:epi.publish("custom-reload-module/reload-page");
+        } else
+        {
+            @:alert("View mode");
+        }
+    }
+</script>
+
+<br />
+<br />
+<p>Clicking 'Notify Edit Mode' will refresh current Edit Mode context</p>
+<button onclick="notifyEditMode()">Notify Edit Mode</button>

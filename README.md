@@ -1,3 +1,7 @@
+# Code example - Edit Mode reload
+
+This branch contains an example of how to refresh Edit Mode editing context from content iframe.
+
 # Alloy MVC Template
 
 ## Setup the Development Environment
