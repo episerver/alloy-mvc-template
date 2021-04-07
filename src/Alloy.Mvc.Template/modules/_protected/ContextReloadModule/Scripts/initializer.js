@@ -3,6 +3,7 @@ define([
     "dojo/topic",
     "dojo/when",
     "epi/_Module",
+    "epi/dependency",
     "epi/shell/postMessage",
     "epi-cms/_ContentContextMixin"
 ], function (
@@ -10,6 +11,7 @@ define([
     topic,
     when,
     _Module,
+    dependency,
     postMessage,
     _ContentContextMixin
 ) {
@@ -32,6 +34,23 @@ define([
                                 forceContextChange: true
                             });
                         });
+
+                        /*
+                        // example of reload with latest content version
+                        // this will work only for Episerver.CMS.UI 11.32 and above
+                        when(this.getCurrentContext()).then(function (currentContext) {
+                            this.latestContentVersionStore = this.latestContentVersionStore || dependency.resolve("epi.storeregistry")
+                                .get("epi.cms.latestcontentversion");
+
+                            this.latestContentVersionStore.query({ id: currentContext.id, keepVersion: true }).then(
+                                function(latestContent) {
+                                    // call force refresh to reload current context
+                                    topic.publish("/epi/shell/context/request", { uri: latestContent.uri }, {
+                                        forceContextChange: true
+                                    });
+                                });
+                        }.bind(this));
+                        */
                     }
                 }.bind(this));
         }
