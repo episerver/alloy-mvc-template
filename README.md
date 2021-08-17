@@ -1,4 +1,4 @@
-# Alloy MVC Template
+# Alloy MVC Template  (CMS 11, .NET Framework 4.x)
 
 ## Setup the Development Environment
 1. Run `setup.cmd`
